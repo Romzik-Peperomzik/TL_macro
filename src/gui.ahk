@@ -142,24 +142,26 @@ RunGUI() {
     Gui, Add, Edit, x150 y420 w40 h20 vkey12, %key12%
     Gui, Add, Text, x200 y420 w190 h20 , Cast time:
     Gui, Add, CheckBox, x270 y420 w15 h15 Checked%key12_cast_active% vkey12_cast_active,
-    Gui, Add, Edit, x300 y420 w50 h20 vkey12_cast_delay, %key12_cast_delay%
-    Gui, Add, Text, x370 y460 w180 h20 , First skill UI position:
-    Gui, Add, Text, x520 y460 w20 h20 , X:
-    Gui, Add, Edit, x540 y460 w50 h20 vx_panel_needle, %x_panel_needle%
-    Gui, Add, Text, x600 y460 w20 h20 , Y:
-    Gui, Add, Edit, x620 y460 w50 h20 vy_panel_needle, %y_panel_needle%
+    Gui, Add, Edit, x300 y420 w50 h20 vkey12_cast_delay, %key12_cast_delay% 
     Gui, Add, Text, x370 y420 w45 h20 , Accept:
     Gui, Add, CheckBox, x425 y420 w15 h15 Checked%key12_accept_click% vkey12_accept_click,
     Gui, Add, Text, x450 y420 w45 h20 , Times:
     Gui, Add, Edit, x500 y420 w20 h20 vkey12_click_times, %key12_click_times%
 
-    Gui, Add, Text, x55 y460 w250 h20 , Delay between skills (global):
-    Gui, Add, Edit, x250 y460 w50 h20 vskills_delay, %skills_delay%
-
-    
+    Gui, Add, Text, x580 y90 w190 h20 , Misc functions:
+    Gui, Add, Text, x580 y120 w270 h20 , Alt + Z - Gets color, x, y at cursor pos.
+    Gui, Add, Text, x580 y150 w270 h20 , Alt + X - Makes needle color map of UI.
     ; Gui, Add, CheckBox, x270 y330 w15 h15 Checked%custom_chat_command_active% vcustom_chat_command_active,
     ; Gui, Add, Edit, x300 y330 w40 h20 vcustomChatCommandHotkey, %customChatCommandHotkey%
 
+    Gui, Add, Text, x55 y460 w250 h20 , Delay between skills (global):
+    Gui, Add, Edit, x250 y460 w50 h20 vskills_delay, %skills_delay%
+    Gui, Add, Text, x55 y490 w180 h20 , First skill UI position:
+    Gui, Add, Text, x230 y490 w20 h20 , X:
+    Gui, Add, Edit, x250 y490 w50 h20 vx_panel_needle, %x_panel_needle%
+    Gui, Add, Text, x310 y490 w20 h20 , Y:
+    Gui, Add, Edit, x330 y490 w50 h20 vy_panel_needle, %y_panel_needle%
+    
     ; Apply button
     Gui, Font, S9 Bold, Verdana
     Gui, Add, GroupBox, x590 y620 w280 h70 , Save settings
