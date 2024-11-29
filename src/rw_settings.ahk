@@ -126,6 +126,9 @@ ReadSettings() {
     IniRead, key12_color_Y,      settings.ini, coords, key12_color_Y,      937
     IniRead, display_rotation_X, settings.ini, coords, display_rotation_X, 552
     IniRead, display_rotation_Y, settings.ini, coords, display_rotation_Y, 721
+    IniRead, panel_needles,      settings.ini, coords, panel_needles,      0
+    IniRead, x_panel_needle,     settings.ini, coords, x_panel_needle,     630
+    IniRead, y_panel_needle,     settings.ini, coords, y_panel_needle,     1045
     ; Commands
     IniRead, chat_command,     settings.ini, commands, chat_command,   /invite Username
 
@@ -182,18 +185,6 @@ SaveSettings() {
     ; Colors
     IniWrite, %ready_key_color%,        settings.ini, colors, ready_key_color
     IniWrite, %cd_key_color%,           settings.ini, colors, cd_key_color
-    IniWrite, %key1_color%,             settings.ini, colors, key1_color
-    IniWrite, %key2_color%,             settings.ini, colors, key2_color
-    IniWrite, %key3_color%,             settings.ini, colors, key3_color
-    IniWrite, %key4_color%,             settings.ini, colors, key4_color
-    IniWrite, %key5_color%,             settings.ini, colors, key5_color
-    IniWrite, %key6_color%,             settings.ini, colors, key6_color
-    IniWrite, %key7_color%,             settings.ini, colors, key7_color
-    IniWrite, %key8_color%,             settings.ini, colors, key8_color
-    IniWrite, %key9_color%,             settings.ini, colors, key9_color
-    IniWrite, %key10_color%,            settings.ini, colors, key10_color
-    IniWrite, %key11_color%,            settings.ini, colors, key11_color
-    IniWrite, %key12_color%,            settings.ini, colors, key12_color
     ; Delays
     IniWrite, %skills_delay%,           settings.ini, delays, skills_delay
     IniWrite, %key1_cast_delay%,        settings.ini, delays, key1_cast_delay
@@ -234,32 +225,11 @@ SaveSettings() {
     IniWrite, %key11_click_times%,      settings.ini, states, key11_click_times
     IniWrite, %key12_click_times%,      settings.ini, states, key12_click_times
     ; Coords
-    IniWrite, %key1_color_X%,           settings.ini, coords, key1_color_X
-    IniWrite, %key1_color_Y%,           settings.ini, coords, key1_color_Y
-    IniWrite, %key2_color_X%,           settings.ini, coords, key2_color_X
-    IniWrite, %key2_color_Y%,           settings.ini, coords, key2_color_Y
-    IniWrite, %key3_color_X%,           settings.ini, coords, key3_color_X
-    IniWrite, %key3_color_Y%,           settings.ini, coords, key3_color_Y
-    IniWrite, %key4_color_X%,           settings.ini, coords, key4_color_X
-    IniWrite, %key4_color_Y%,           settings.ini, coords, key4_color_Y
-    IniWrite, %key5_color_X%,           settings.ini, coords, key5_color_X
-    IniWrite, %key5_color_Y%,           settings.ini, coords, key5_color_Y
-    IniWrite, %key6_color_X%,           settings.ini, coords, key6_color_X
-    IniWrite, %key6_color_Y%,           settings.ini, coords, key6_color_Y
-    IniWrite, %key7_color_X%,           settings.ini, coords, key7_color_X
-    IniWrite, %key7_color_Y%,           settings.ini, coords, key7_color_Y
-    IniWrite, %key8_color_X%,           settings.ini, coords, key8_color_X
-    IniWrite, %key8_color_Y%,           settings.ini, coords, key8_color_Y
-    IniWrite, %key9_color_X%,           settings.ini, coords, key9_color_X
-    IniWrite, %key9_color_Y%,           settings.ini, coords, key9_color_Y
-    IniWrite, %key10_color_X%,          settings.ini, coords, key10_color_X
-    IniWrite, %key10_color_Y%,          settings.ini, coords, key10_color_Y
-    IniWrite, %key11_color_X%,          settings.ini, coords, key11_color_X
-    IniWrite, %key11_color_Y%,          settings.ini, coords, key11_color_Y
-    IniWrite, %key12_color_X%,          settings.ini, coords, key12_color_X
-    IniWrite, %key12_color_Y%,          settings.ini, coords, key12_color_Y
     IniWrite, %display_rotation_X%,     settings.ini, coords, display_rotation_X
     IniWrite, %display_rotation_Y%,     settings.ini, coords, display_rotation_Y
+    IniWrite, %panel_needles%,          settings.ini, coords, panel_needles
+    IniWrite, %x_panel_needle%,         settings.ini, coords, x_panel_needle
+    IniWrite, %y_panel_needle%,         settings.ini, coords, y_panel_needle
     ; Commands
     IniWrite, %chat_command%,           settings.ini, commands, chat_command
 

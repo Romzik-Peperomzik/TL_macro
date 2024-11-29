@@ -28,7 +28,7 @@ RunGUI()
 ; ! - alt, ^ - ctrl, + - shift.
 ; Functions that are not represented into GUI, only hotkeys.
 !z::GetMouseColorPos()
-!x::Test()
+!x::MakePanelNeedleColorMap()
 ;-----------------------------------------------------------------------------
 
 

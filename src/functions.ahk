@@ -25,9 +25,10 @@ GetKeysData() {
         ]
     }
     */
+    
     keys_a := [key1, key2, key3, key4, key5, key6, key7, key8, key9, key10, key11, key12]
-    key_colors_a := [key1_color, key2_color, key3_color, key4_color, key5_color, key6_color, key7_color, key8_color, key9_color, key10_color, key11_color, key12_color]
-    key_coords_a := [[key1_color_X, key1_color_Y], [key2_color_X, key2_color_Y], [key3_color_X, key3_color_Y], [key4_color_X, key4_color_Y], [key5_color_X, key5_color_Y], [key6_color_X, key6_color_Y], [key7_color_X, key7_color_Y], [key8_color_X, key8_color_Y], [key9_color_X, key9_color_Y], [key10_color_X, key10_color_Y], [key11_color_X, key11_color_Y], [key12_color_X, key12_color_Y]]
+    key_coords_a := []
+    key_colors_a := []
     key_cast_active_a := [key1_cast_active, key2_cast_active, key3_cast_active, key4_cast_active, key5_cast_active, key6_cast_active, key7_cast_active, key8_cast_active, key9_cast_active, key10_cast_active, key11_cast_active, key12_cast_active]
     key_cast_delay_a := [key1_cast_delay, key2_cast_delay, key3_cast_delay, key4_cast_delay, key5_cast_delay, key6_cast_delay, key7_cast_delay, key8_cast_delay, key9_cast_delay, key10_cast_delay, key11_cast_delay, key12_cast_delay]
     key_states := [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
@@ -37,6 +38,13 @@ GetKeysData() {
 
     keys_obj := {}
     len := keys_a.Length()
+
+    Loop, parse, panel_needles, `,
+    {
+        arr := StrSplit(A_LoopField , "-")
+        key_coords_a.Push([arr[1], arr[2]])
+        key_colors_a.Push(arr[3])
+    }
 
     Loop, %len% {
         keys_obj[keys_a[A_Index]] := [key_colors_a[A_Index], key_coords_a[A_Index][1], key_coords_a[A_Index][2], key_cast_active_a[A_Index], key_cast_delay_a[A_Index], key_states[A_Index], key_actives[A_Index], key_accept_clicks[A_Index], key_click_times[A_Index]]

@@ -20,6 +20,39 @@ DisplayNotice(display := 0, GuiName := "none", label := "blank", x := 0, y := 0,
 }
 
 
+MakePanelNeedleColorMap() {
+    /*  Makes coords and colors map for each skill cell on UI panel.
+        Choose needle pixel at 1 skill on panel ingame get coords with Alt+Z and
+        write them in script UI.
+        Then press hotkey (Alt+X) ingame its automatically writes x, y and color.
+    */
+    panel_needles := ""
+    jump_count_limit := 12
+    jump_count := 1
+    small_jump := 55
+    big_jump := 112
+
+    x := x_panel_needle
+    y := y_panel_needle
+
+    while (jump_count <= jump_count_limit) {
+        PixelGetColor, color, x, y, fast
+        panel_needles .= x . "-" . y . "-" . color . ","
+        jump_count += 1
+        if (jump_count = 7) {
+            x += big_jump    
+        } else {
+            x += small_jump
+        }
+    }
+
+    IniWrite, %panel_needles%, settings.ini, coords, panel_needles
+    
+    MsgBox, Panel needles map are setted.
+    Reload
+}
+
+
 TurnOffAllHotkey() {
     TurnOffHotkey(startRotationHotkey)
     TurnOffHotkey(customChatCommandHotkey)
